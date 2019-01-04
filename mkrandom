@@ -1,0 +1,4 @@
+#!/bin/bash
+for n in $(seq 1 "$1"); do
+	dd if=/dev/urandom iflag=fullblock of=file$( printf %03d "$n" ) bs=1 count=$2
+done

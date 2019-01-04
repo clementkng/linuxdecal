@@ -1,0 +1,4 @@
+#!/bin/bash
+string="${1%/}"
+string="${string#/}"
+echo $string | cut -f1 -d"/"
